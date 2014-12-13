@@ -1,5 +1,18 @@
-<ul>
-  <li></li>
-  <li></li>
-</ul>
-{{outlet}}
+<div class="container">
+  <button {{action 'createPost'}}>Create Post</button>
+</div>
+<div class="container">
+  {{#each post in model}}
+    <div class="panel">
+      <div class="panel-header">
+        {{#link-to 'post/detail' post.id}} {{post.ownerName}} {{/link-to}}
+      </div>
+        <div class="panel-body">
+        <div class="row">{{post.ownerName}}</div>
+        <div class="row">{{post.to}}</div>
+        <div class="row">{{post.from}}</div>
+        <div class="row">{{post.contactNo}}</div>
+        </div>
+    </div>
+  {{/each}}
+</div>
