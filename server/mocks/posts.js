@@ -9,14 +9,28 @@ module.exports = function(app) {
         ownerName: 'Pallavi',
         to: 'Indiranagar',
         from:'Malleshwaram',
-        contactNo: '1234567890'
+        contactNo: '5384725173'
       },
       {
         id: 2,
-        ownerName: 'Pallavi',
-        to: 'Indiranagar',
-        from:'Malleshwaram',
-        contactNo: '1234567890'
+        ownerName: 'Varun',
+        to: 'KR Puram',
+        from:'Jayanagar',
+        contactNo: '8123455734'
+      },
+      {
+        id: 3,
+        ownerName: 'Ember',
+        to: 'NR colony',
+        from:'Yeshwanthpur',
+        contactNo: '8123455734'
+      },
+      {
+        id: 4,
+        ownerName: 'Manish',
+        to: 'BTM Layout',
+        from:'Whitefield',
+        contactNo: '7123455734'
       }]
     });
   });

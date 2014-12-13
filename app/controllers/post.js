@@ -13,9 +13,10 @@ export default Ember.Controller.extend({
       });
 
       this.transitionToRoute('index');
-
-
-
+      this.set('ownerName', '');
+      this.set('from', '');
+      this.set('to', '');
+      this.set('contactNo', '');
     }
   }
 });

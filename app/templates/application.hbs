@@ -1,9 +1,6 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      {{#link-to 'index' class='navbar-brand'}}Carpooling{{/link-to}}
-    </div>
-  </div>
-</nav>
+<div class="well">
+  {{#link-to 'index'}}Carpooling{{/link-to}}
+  <button class='pull-right btn-primary' {{action 'createPost'}}>Create Post</button>
+</div>
 
 {{outlet}}

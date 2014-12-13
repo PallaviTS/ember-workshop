@@ -1,8 +1,64 @@
 <div class="panel">
-        <div class="panel-body">
-          <div class="row">{{ownerName}}</div>
-          <div class="row">{{to}}</div>
-          <div class="row">{{from}}</div>
-          <div class="row">{{contactNo}}</div>
-        </div>
+  <div class="panel-body">
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+            <th>Owner Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Contact Me</th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ownerName}}</td>
+          <td>{{to}}</td>
+          <td>{{from}}</td>
+          <td>{{contactNo}}</td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
 </div>  
+
+
+<div class="clearfix">
+    <form role="form" name="formname">
+        <div class="clearfix">
+            <div class="col-md-12 form-horizontal padding-top-10px well">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label text-right">Rider Name:</label>
+                            <div class="col-sm-7">
+                                {{input name="rider"  class="form-control" type="text" value=riderName}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label text-right">Comment :</label>
+                            <div class="col-sm-7">
+                                {{input name="comment"  class="form-control" type="textfield" value=comment}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="col-sm-5 control-label text-right">Contact No :</label>
+                                <div class="col-sm-7">
+                                    {{input name="contactNo" class="form-control"  type="text" value=ridercontactNo}}
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-sm-12 col-sm-offset-4">
+                                <button {{action 'saveComment'}} class="btn btn-primary ">
+                                    Add Comment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

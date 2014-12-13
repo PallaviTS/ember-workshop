@@ -1,18 +1,26 @@
-<div class="container">
-  <button {{action 'createPost'}}>Create Post</button>
+<div class="panel panel-default">
+  <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+          <th>Owner Name</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Contact Me</th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each post in model}}
+        <tr>
+          <td>{{post.ownerName}}</td>
+          <td>{{post.to}}</td>
+          <td>{{post.from}}</td>
+          <td>{{post.contactNo}}</td>
+          <td>{{#link-to 'post/detail' post.id}}<span class="mdi-editor-insert-comment"/>{{/link-to}}</td>
+        </tr>
+      {{/each}}  
+    </tbody>
+  </table>
 </div>
-<div class="container">
-  {{#each post in model}}
-    <div class="panel">
-      <div class="panel-header">
-        {{#link-to 'post/detail' post.id}} {{post.ownerName}} {{/link-to}}
-      </div>
-        <div class="panel-body">
-        <div class="row">{{post.ownerName}}</div>
-        <div class="row">{{post.to}}</div>
-        <div class="row">{{post.from}}</div>
-        <div class="row">{{post.contactNo}}</div>
-        </div>
-    </div>
-  {{/each}}
-</div>
+
+
